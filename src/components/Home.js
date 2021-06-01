@@ -7,11 +7,14 @@ const Home = () => {
     "http://localhost:9000/Lists"
   );
 
+  const date = new Date().toDateString();
+
   return (
     <div id="Home">
       <p className="text-xl font-semibold mt-5">Todo List :</p>
+      {date}
       {isPending && <p>Loading ...</p>}
-      {data && <TodoList lists={data} />}
+      {!isPending && <TodoList lists={data} />}
       {error && <p>{error}</p>}
       <div className="w-full flex justify-center">
         <Link to={"/add"}>

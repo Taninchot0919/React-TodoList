@@ -8,10 +8,13 @@ const AddList = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const date = new Date().toDateString();
+
     let newList = {
       title: title,
       status: "On going",
       details: details,
+      date: date,
     };
     console.log(newList);
     fetch("http://localhost:9000/Lists", {
@@ -36,7 +39,6 @@ const AddList = () => {
             setTitle(e.target.value);
           }}
         />
-        {/* {title} */}
         <label className="text-left block text-xl mt-3">Details :</label>
         <textarea
           className="block border border-black max-w-full h-32 px-2"
