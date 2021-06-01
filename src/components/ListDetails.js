@@ -1,16 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router";
 import FetchingData from "./FetchingData";
 import Modal from "./Modal";
 
 const ListDetails = () => {
   const { id } = useParams();
-  const {
-    data: list,
-    isPending,
-    error,
-  } = FetchingData("http://localhost:9000/Lists/" + id); // เอา data ที่มาจาก FechingData มาเปลี่ยนชื่อเป็น list
+  const { data: list, isPending } = FetchingData(
+    "http://localhost:9000/Lists/" + id
+  ); // เอา data ที่มาจาก FechingData มาเปลี่ยนชื่อเป็น list
   const [isModalOn, setIsModalOn] = useState(false);
+  const [stateStatus, setStateStatus] = useState("");
   const history = useHistory();
 
   const handleDelete = () => {
@@ -27,15 +26,33 @@ const ListDetails = () => {
     setIsModalOn(false);
   };
 
+  const handleStatusButton = (status) => {
+    if (status === "On going") {
+      setStateStatus("Done");
+    } else if (status === "Done") {
+      setStateStatus("On going");
+    }
+    console.log(stateStatus);
+  };
+
   let modal = null;
   if (isModalOn) {
     modal = <Modal data={list} handleCancel={closeModal} />;
   }
+
+  useEffect(() => {
+    let oldStatus = list.status;
+    setStateStatus(oldStatus);
+  }, []);
+
   return (
     <div>
       {isPending && <p>Loading...</p>}
       {!isPending && (
         <div>
+          <button onClick={() => handleStatusButton(stateStatus)}>
+            {stateStatus}
+          </button>
           <p className="font-bold text-xl">
             Title: <span className="font-normal">{list.title}</span>
           </p>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useHistory } from "react-router";
 
-const Modal = ({ data , handleCancel}) => {
+const Modal = ({ data, handleCancel }) => {
   let list = data;
   const [title, setTitle] = useState("default");
   const [details, setDetails] = useState();
@@ -63,7 +63,9 @@ const Modal = ({ data , handleCancel}) => {
             <button className="px-3 py-1 bg-yellow-300" onClick={handleEdit}>
               Edit
             </button>
-            <button className="px-3 py-1 bg-red-300" onClick={handleCancel}>Cancel</button>
+            <button className="px-3 py-1 bg-red-300" onClick={handleCancel}>
+              Cancel
+            </button>
           </div>
         </div>
       </div>
