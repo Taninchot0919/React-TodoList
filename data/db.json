@@ -3,17 +3,32 @@
     {
       "title": "Title",
       "status": "Done",
+      "details": "lorem ipsum naja uu eiei",
       "id": 1
     },
     {
       "title": "Say love to karn",
       "status": "Done",
+      "details": "lorem ipsum naja uu eiei",
       "id": 2
     },
     {
       "title": "Learning React Framework",
       "status": "Done",
+      "details": "lorem ipsum naja uu eiei",
       "id": 3
+    },
+    {
+      "title": "Title",
+      "status": "On going",
+      "details": "Details Naja",
+      "id": 4
+    },
+    {
+      "title": "Todo List Naja",
+      "status": "On going",
+      "details": "Details Naja",
+      "id": 5
     }
   ]
 }
