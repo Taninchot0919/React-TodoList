@@ -1,18 +1,17 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
 import { useHistory } from "react-router";
 
-const Modal = ({ data, handleCancel }) => {
-  let list = data;
-  const [title, setTitle] = useState("default");
-  const [details, setDetails] = useState();
+const Modal = ({ data: list, handleCancel }) => {
+  const enteredTitle = useRef();
+  const enteredDetails = useRef();
+
   const history = useHistory();
 
   const handleEdit = () => {
     let editedList = {
-      title: title,
-      details: details,
+      title: enteredTitle.current.value,
+      details: enteredDetails.current.value,
     };
-    console.log(editedList);
     fetch("http://localhost:9000/Lists/" + list.id, {
       method: "PATCH",
       headers: { "Content-type": "application/json" },
@@ -25,11 +24,8 @@ const Modal = ({ data, handleCancel }) => {
   };
 
   useEffect(() => {
-    let oldTitle = list.title;
-    let oldDetails = list.details;
-    setTitle(oldTitle);
-    setDetails(oldDetails);
-    console.log(title);
+    enteredTitle.current.value = list.title;
+    enteredDetails.current.value = list.details;
   }, []);
 
   return (
@@ -46,18 +42,12 @@ const Modal = ({ data, handleCancel }) => {
           <input
             type="text"
             className="block border border-black w-full px-2 py-1"
-            value={title}
-            onChange={(e) => {
-              setTitle(e.target.value);
-            }}
+            ref={enteredTitle}
           />
           <label>Details:</label>
           <textarea
             className="block border border-black w-full px-2 py-1"
-            value={details}
-            onChange={(e) => {
-              setDetails(e.target.value);
-            }}
+            ref={enteredDetails}
           />
           <div className="mt-5 space-x-3">
             <button className="px-3 py-1 bg-yellow-300" onClick={handleEdit}>

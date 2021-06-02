@@ -1,16 +1,9 @@
 {
   "Lists": [
     {
-      "title": "Title",
-      "status": "Done",
-      "details": "lorem ipsum naja uu eiei lorem ipsum naja uu eiei lorem ipsum naja uu eiei",
-      "date": "Tue Jun 01 2021",
-      "id": 1
-    },
-    {
       "title": "Say love to karn",
       "status": "Done",
-      "details": "เราจะบอกรักเธอไปทุกวันเลยนะคับ อุอิ ครุคริ ค๊ากกกกก",
+      "details": "lorem ipsum naja uu eiei lorem ipsum naja uu eiei lorem ipsum naja uu eiei",
       "date": "Tue Jun 01 2021",
       "id": 2
     },
@@ -36,11 +29,32 @@
       "id": 5
     },
     {
-      "title": "ควย React ยากชิบหาย",
+      "title": "ทำไม React ยากจังเลยอะคั้บ",
       "status": "On going",
-      "details": "ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ควย ",
+      "details": "ทำไมมันยากจังเลย ฮื้อออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออ",
       "date": "Tue Jun 01 2021",
       "id": 6
+    },
+    {
+      "title": "I love Karn Mak mak",
+      "status": "On going",
+      "details": "Because you so cuteeeeeeee Mak mak Mak mak Mak mak Mak mak Mak mak Mak mak Mak mak Mak mak Mak mak Mak mak Mak mak Mak mak Mak mak Mak mak Mak mak Mak mak Mak mak Mak mak Mak mak Mak mak Mak mak Mak mak Mak mak Mak mak Mak mak Mak mak Mak mak Mak mak Mak mak Mak mak Mak mak Mak mak Mak mak Mak mak",
+      "date": "Tue Jun 01 2021",
+      "id": 7
+    },
+    {
+      "title": "Learning more about react",
+      "status": "On going",
+      "details": "Learning more about react",
+      "date": "Wed Jun 02 2021",
+      "id": 8
+    },
+    {
+      "title": "ตะไมมันยากส์แบบนี้ส์",
+      "status": "On going",
+      "details": "",
+      "date": "Wed Jun 02 2021",
+      "id": 9
     }
   ]
 }

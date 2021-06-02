@@ -16,7 +16,6 @@ const AddList = () => {
       details: details,
       date: date,
     };
-    console.log(newList);
     fetch("http://localhost:9000/Lists", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -34,21 +33,20 @@ const AddList = () => {
         <label className="text-left block text-xl mt-3">Title : </label>
         <input
           type="text"
-          className="block border border-black max-w-full px-2"
+          className="block border border-black max-w-full px-2 py-1"
           onChange={(e) => {
             setTitle(e.target.value);
           }}
         />
         <label className="text-left block text-xl mt-3">Details :</label>
         <textarea
-          className="block border border-black max-w-full h-32 px-2"
+          className="block border border-black max-w-full h-32 px-2 py-1"
           onChange={(e) => {
             setDetails(e.target.value);
           }}
         />
-        {/* {details} */}
         <button
-          className="px-3 py-1 mt-3 border-black border"
+          className="px-3 py-1 mt-3 border bg-green-400 text-white"
           onClick={handleSubmit}
         >
           Adding list

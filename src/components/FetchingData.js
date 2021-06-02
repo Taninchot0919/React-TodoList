@@ -7,16 +7,13 @@ const FetchingData = (url) => {
 
   useEffect(() => {
     const abortController = new window.AbortController();
-    console.log(url);
     fetch(url, { signal: abortController.signal })
       .then((res) => {
         if (res.ok) {
           return res.json();
         }
-        console.log(res);
       })
       .then((data) => {
-        console.log(data);
         setData(data);
         setIsPending(false);
         setError(null);

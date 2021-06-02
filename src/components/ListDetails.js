@@ -13,7 +13,6 @@ const ListDetails = () => {
   const history = useHistory();
 
   const handleDelete = () => {
-    console.log("Has click at delete button");
     fetch("http://localhost:9000/Lists/" + id, {
       method: "DELETE",
     }).then((res) => {
@@ -29,10 +28,19 @@ const ListDetails = () => {
   const handleStatusButton = (status) => {
     if (status === "On going") {
       setStateStatus("Done");
+      toggleChangeStatus("Done");
     } else if (status === "Done") {
       setStateStatus("On going");
+      toggleChangeStatus("On going");
     }
-    console.log(stateStatus);
+  };
+
+  const toggleChangeStatus = (status) => {
+    fetch("http://localhost:9000/Lists/" + id, {
+      method: "PATCH",
+      headers: { "Content-type": "application/json" },
+      body: JSON.stringify({ status: status }),
+    });
   };
 
   let modal = null;
@@ -41,16 +49,22 @@ const ListDetails = () => {
   }
 
   useEffect(() => {
-    let oldStatus = list.status;
-    setStateStatus(oldStatus);
-  }, []);
+    setStateStatus(list.status);
+  }, [list.status]);
 
   return (
     <div>
       {isPending && <p>Loading...</p>}
       {!isPending && (
         <div>
-          <button onClick={() => handleStatusButton(stateStatus)}>
+          <button
+            onClick={() => handleStatusButton(stateStatus)}
+            className={
+              stateStatus === "Done"
+                ? "bg-green-500 px-4 py-2 rounded-lg mb-2 text-white"
+                : "bg-red-500 px-4 py-2 rounded-lg mb-2 text-white"
+            }
+          >
             {stateStatus}
           </button>
           <p className="font-bold text-xl">
